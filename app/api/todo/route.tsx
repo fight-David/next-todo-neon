@@ -1,8 +1,9 @@
 // app/api/todo/route.ts
 import { NextRequest, NextResponse } from 'next/server'
-import { PrismaClient } from '@prisma/client'
+import prisma from "@/prisma/client";
 
-const prisma = new PrismaClient()
+// import { PrismaClient } from '@prisma/client'
+// const prisma = new PrismaClient()
 
 export async function GET() {
   const todos = await prisma.todo.findMany({ orderBy: { createdAt: 'desc' } })

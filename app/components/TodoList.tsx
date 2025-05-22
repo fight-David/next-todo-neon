@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { fetchTodos, addTodo, toggleTodo, deleteTodo } from '@/lib/api'
-import { Todo } from '@/types/todo'
+import { fetchTodos, addTodo, toggleTodo, deleteTodo } from '../../lib/api-todo'
+import { Todo } from '@/types/types'
 import TodoItem from './TodoItem'
 
 export default function TodoList() {
